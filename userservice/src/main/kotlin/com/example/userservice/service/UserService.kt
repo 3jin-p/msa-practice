@@ -4,4 +4,6 @@ import com.example.userservice.dto.UserDto
 
 interface UserService {
     fun createUser(userDto: UserDto): UserDto
+    fun getUserByUserId(userId: String): UserDto
+    fun getUserByAll(): Iterable<UserDto>
 }

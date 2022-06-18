@@ -10,6 +10,8 @@ data class UserDto(
     var userId: String? = null
     var encryptedPwd: String? = null
 
+    var orders: List<ResponseOrder>? = null
+
     companion object {
         fun from(entity: UserEntity): UserDto {
             val result = UserDto(entity.email, null, entity.name)
