@@ -23,6 +23,10 @@ spring:
 
       routes:
         - id: first-service
+          uri: lb://USER-SERVICE # discovery 에서 찾아서 포워딩
+          predicates:
+            - Path=/user-service/**
+        - id: first-service
 #          uri: http://localhost:8081/
           uri: lb://MY-FIRST-SERVICE # discovery 에서 찾아서 포워딩
           predicates:
